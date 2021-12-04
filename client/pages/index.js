@@ -4,6 +4,7 @@ import axios from "../helpers/axiosConfig.js";
 export default function Home() {
   const [state, setState] = useState("Hello");
 
+  console.log(process.env);
   useEffect(() => {
     axios.get("/api/testRoute").then((res) => {
       setState(res.data.message);

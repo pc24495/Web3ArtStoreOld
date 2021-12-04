@@ -4,7 +4,7 @@
   "proxy": "http://localhost:5000/",
   "scripts": {
     "dev": "NODE_ENV='development' node server.js",
-    "build": "next build && next export",
+    "build": "NODE_ENV='production' && next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
