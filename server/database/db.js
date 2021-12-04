@@ -2,12 +2,10 @@ require("dotenv").config();
 const knex = require("knex");
 const knexfile = require("./knexfile.js");
 
-console.log(process.env.NODE_DEV);
-
 const db = knex(
-  ["development"].includes(process.env.NODE_DEV)
+  ["development"].includes(process.env.NODE_ENV)
     ? knexfile.development
-    : ["production"].includes(process.env.NODE_DEV)
+    : ["production"].includes(process.env.NODE_ENV)
     ? knexfile.production
     : knexfile.test
 );
