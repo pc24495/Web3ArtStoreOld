@@ -9,7 +9,7 @@ export default function Home() {
     axios.get("/api/testRoute").then((res) => {
       setState(res.data.message);
     });
-  }, []);
+  }, []); //
 
   return (
     <div>
